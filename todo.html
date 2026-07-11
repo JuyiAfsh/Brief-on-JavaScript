@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To Do List</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background: lightpink;
+        }
+
+        button {
+            background: plum;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        input {
+            font-size: 18px;
+            font-family: monospace;
+            background: lightgrey;
+        }
+
+        li {
+            font-size: 17px;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Add your To Do List here</h3>
+    <form id="myForm">
+        <input id="myInput" type="text">
+        <button> Add </button>
+    </form>
+
+    <h3>To Do List</h3>
+    <ul id="myItem"></ul>
+    <script>
+        var myForm = document.getElementById("myForm");
+        var myInput = document.getElementById("myInput");
+        var myItem = document.getElementById("myItem");
+
+        myForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        createItem(myInput.value)
+    })
+
+    function createItem(inputItems) {
+        var items = `<li>${inputItems}
+        <button onclick="deleteElement(this)">Delete</button> </li>`
+        myItem.insertAdjacentHTML("beforeend", items)
+        myInput.value = ""
+        myInput.focus()
+    }
+
+    function deleteElement(ElementToDelete) {
+        ElementToDelete.parentElement.remove()
+    }
+    </script>
+</body>
+</html>
