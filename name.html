@@ -3,21 +3,68 @@
 
 <head>
     <title>Addition</title>
+    <style>
+        body {
+            background-image: linear-gradient(to top right, white, aqua, blue, darkblue, black);
+            height: 95vh;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            margin-top: 55px;
+        }
+        input {
+            width: 35vh;
+            padding: 5px;
+            margin: 2px;
+        }
+        #Number {
+            font-weight: bolder;
+        }
+        button {
+            background-color: violet;
+            cursor: pointer;
+            border-radius: 6px;
+            padding: 5px;
+            width: 30px;
+            margin: 3px;
+        }
+    </style>
 </head>
 <body>
     <div>
         <h4>Press the buttons to add or subtract</h4>
-        <p id="number">0</p>
-        <button id="add">+ 1</button>
-        <button id="subtract">- 1</button>
+        <p id="Number">0</p>
+        <button id="add"> + </button>
+        <button id="subtract"> - </button><br>
+        <input type="number" id="inputadd" placeholder="Enter a number to add"><br>
+        <input type="number" id="inputsubtract" placeholder="Enter a number to subtract"><br>
     </div>
 
     <script>
         var number = 0;
         var add = document.getElementById("add");
         var subtract = document.getElementById("subtract");
+        var inputadd = document.getElementById("inputadd");
+        var inputsubtract = document.getElementById("inputsubtract");
+
         add.onclick = function () {
-            
+            number = number + Number(inputadd.value);
+            if (inputadd.value === "") {
+                alert("Please enter a number!!!")
+            }
+            document.getElementById("Number").innerHTML = number;
+        }
+
+        subtract.onclick = function () {
+            number = number - Number(inputsubtract.value);
+            if (inputsubtract.value === "") {
+               alert("Please enter a number!!!")
+            }
+            document.getElementById("Number").innerHTML = number;
         }
     </script>
 </body>
