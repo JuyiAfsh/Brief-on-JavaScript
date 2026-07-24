@@ -47,17 +47,19 @@
 <body>
     <div>
         <h1>Stopwatch</h1>
-        <p><span id="seconds">00</span>:<span id="milliseconds">00</span></p>
+        <p><span id="minutes">00</span>:<span id="seconds">00</span>:<span id="milliseconds">00</span></p>
         <button id="button-start">Start</button>
         <button id="button-stop">Stop</button>
         <button id="button-reset">Reset</button>
     </div>
 
     <script>
+        var minutes = 0;
         var seconds = 0;
         var milliseconds = 0;
         var appendMilliseconds = document.getElementById("milliseconds");
         var appendSeconds = document.getElementById("seconds");
+        var appendMinutes = document.getElementById("minutes");
         var buttonStart = document.getElementById("button-start");
         var buttonStop = document.getElementById("button-stop");
         var buttonReset = document.getElementById("button-reset");
@@ -76,8 +78,10 @@
                 clearInterval(Interval);
                 milliseconds = "00";
                 seconds = "00";
+                minutes = "00"
                 appendMilliseconds.innerHTML = milliseconds;
                 appendSeconds.innerHTML = seconds;
+                appendMinutes.innerHTML = minutes;
             };
         };
         function startTimer() {
@@ -89,18 +93,40 @@
             if (milliseconds > 9) {
                 appendMilliseconds.innerHTML = milliseconds;
             }
-            if (milliseconds > 60) {
+            if (milliseconds > 99) {
                 seconds++;
                 appendSeconds.innerHTML = seconds;
                 milliseconds = 0;
                 appendMilliseconds.innerHTML = "00";
             }
-            if (milliseconds <= 9) {
+            if (seconds <= 9) {
                 appendSeconds.innerHTML = "0" + seconds;
             }
             if (seconds > 9) {
                 appendSeconds.innerHTML = seconds;
             }
+            if (seconds > 59) {
+                minutes++;
+                appendMinutes.innerHTML = minutes;
+                seconds = 0;
+                appendSeconds.innerHTML = "00";
+            }
+            if (minutes <= 9) {
+                appendMinutes.innerHTML = "0" + minutes;
+            }
+            if (minutes > 9) {
+                appendMinutes.innerHTML = minutes;
+            }
+            if (minutes > 59) {
+                clearInterval(Interval);
+                milliseconds = "00";
+                seconds = "00";
+                minutes = "00"
+                appendMilliseconds.innerHTML = milliseconds;
+                appendSeconds.innerHTML = seconds;
+                appendMinutes.innerHTML = minutes;
+            }
+
         }
     </script>
 </body>
