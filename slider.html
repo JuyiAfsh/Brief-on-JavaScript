@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+<body>
+    <h3>Sliders</h3>
+    <center>
+    <section>
+        <img class="mySlides" src="https://www.softwareacademy.co.uk/wp-content/uploads/2024/01/Online-Coding-Classes.jpg" style="height: 250px;width: 250px;">
+        <img class="mySlides" src="https://img.magnific.com/premium-vector/cartoon-boy-with-headphones-computer-screen-that-says-code-code_1022901-120371.jpg?semt=ais_test_b&w=740&q=80"
+        style="height: 250px;width: 250px;">
+        <img class="mySlides"
+        src="https://img.magnific.com/free-vector/girl-using-laptop-with-binary-code_1308-114505.jpg?semt=ais_test_b&w=740&q=80"
+         style="height: 250px;width: 250px;">
+        <img class="mySlides"
+         src="https://img.magnific.com/free-vector/hacker-operating-laptop-cartoon-icon-illustration-technology-icon-concept-isolated-flat-cartoon-style_138676-2387.jpg?w=360"
+        style="height: 250px;width: 250px;">
+    </section>
+    </center>
+
+    <script>
+
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none"; //making invisible
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+            myIndex = 1
+        }
+        x[myIndex-1].style.display = "block"; //making visible
+        setTimeout(carousel, 3000);
+    }
+    </script>
+</body>
+</html>
