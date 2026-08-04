@@ -1,0 +1,46 @@
+.img1, .img2, .img3 {
+    position: relative;
+    opacity: 1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.img1 {
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/001/849/553/small/modern-gold-background-free-vector.jpg');
+    min-height: 100vh;
+}
+
+.img2 {
+    background-image: url('https://img.magnific.com/free-vector/night-landscape-with-lake-mountains-trees-coast-vector-cartoon-illustration-nature-scene-with-coniferous-forest-river-shore-rocks-moon-stars-dark-sky_107791-8253.jpg');
+    min-height: 100vh;
+}
+
+.img3 {
+    background-image: url('https://wallpapers.com/images/featured/purple-aesthetic-laptop-fwdpri3w3gfu7omp.jpg');
+    min-height: 100vh;
+}
+
+.section-dark {
+    background-color: darkgray;
+    color: blanchedalmond;
+    text-align: center;
+}
+
+.ptext {
+    position: absolute;
+    top: 65vh;
+    width: 100%;
+    text-align: center;
+    color: azure;
+    font-size: 30px;
+    letter-spacing: 7px;
+    text-transform: capitalize;
+}
+
+@media(max-width:568px) {
+    .img1, .img2, .img3 {
+        background-attachment: scroll;
+    }
+}
