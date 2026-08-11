@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Resturant</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: monospace;
+            
+        }
+        .nav {
+            overflow: hidden;
+            background-color: darkblue;
+        }
+        .nav a {
+            float: left;
+            color: cyan;
+            text-align: center;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .nav a:hover {
+            background-color: whitesmoke;
+            color: black;
+        }
+        .nav a.active {
+            background-color: darkturquoise;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+    <a class="active" href="#home">Home</a>
+    <a href="#">Menu</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Locations</a>
+    </div>
+    <h4>  What we sell</h4>
+    <center>
+        <section>
+            <img class="slider" url="https://alpineella.com/wp-content/uploads/2024/08/featured-image-mini-chocolate-cupcakes.jpg" style="height: 300px; width: 300px;">
+            <img class="slider" url="https://img.magnific.com/free-photo/pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.jpg?semt=ais_test_b&w=740&q=80"
+            style="height: 300px; width: 300px;">
+            <img class="slider"
+            url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDn_yc6wTONsQxPaBJN1_85_bHX_I7PBcxhBpo5Uw7HA&s=10"
+            style="height: 300px; width: 300px;">
+            <img class="slider"
+            url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrpsblDqyUEHGTI25RjoKj7R31Xfe_IsCpzL0vZLCnEw&s=10"
+            style="height: 300px; width: 300px;">
+        </section>
+    </center>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var x = document.getElementById("slider");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 3500);
+        }
+    </script>
+</body>
+</html>
