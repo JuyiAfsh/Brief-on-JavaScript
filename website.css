@@ -1,0 +1,70 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: red;
+    background-color: antiquewhite;
+    line-height: 1.5em;
+}
+
+.topnav {
+    background-color: grey;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    color: yellow;
+    text-align: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.topnav a:hover {
+    background-color: orange;
+    color: white;
+}
+
+.topnav a.active {
+    background-color: plum;
+    color:black;
+}
+
+.pimg1,
+.pimg2,
+.pimg3 {
+    position: relative;
+    opacity: 0.9;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.pimg1{
+    background-image: url("https://image.made-in-china.com/251f0j00UfYRvAsnJtWG/made-in-china.jpg");
+    min-height: 350px;
+}
+
+.pimg2 {
+    background-image: url("https://www.allrecipes.com/thmb/WPOwbfCiLz4DRqMnKF4zOWT1fHE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ar-lunar-new-year-11867043-PICS-beauty-01-6914-4x3-d2589e1115b240019cd5ca82d73fceff.jpg");
+    min-height: 350px;
+}
+
+.pimg3 {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK6RBKoJmH79VjHdxKzekozvlkNMzPp2wMQFzhEj5dg_tdj3G7RkSQ4f4&s=10");
+    min-height: 350px;
+}
+
+.ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 26px;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+}

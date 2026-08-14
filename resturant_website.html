@@ -47,8 +47,15 @@
     <a href="#">Locations</a>
     </div>
     <h4>  What we sell</h4>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide to="1"></li>
+            <li data-target="#myCarousel" data-slide to="2"></li>
+        </ol>
     <center>
         <section>
+            <div class="carousel-inner">
             <img class="slider" url="https://alpineella.com/wp-content/uploads/2024/08/featured-image-mini-chocolate-cupcakes.jpg" style="height: 300px; width: 300px;">
             <img class="slider" url="https://img.magnific.com/free-photo/pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.jpg?semt=ais_test_b&w=740&q=80"
             style="height: 300px; width: 300px;">
@@ -58,25 +65,17 @@
             <img class="slider"
             url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrpsblDqyUEHGTI25RjoKj7R31Xfe_IsCpzL0vZLCnEw&s=10"
             style="height: 300px; width: 300px;">
+            </div>
         </section>
     </center>
-
-    <script>
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var x = document.getElementById("slider");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            myIndex++;
-            if (myIndex > x.length) {
-                myIndex = 1
-            }
-            x[myIndex-1].style.display = "block";
-            setTimeout(carousel, 3500);
-        }
-    </script>
+    <a class="left carousel-control"   href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    </div>
 </body>
 </html>
